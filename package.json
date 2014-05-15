@@ -1,0 +1,35 @@
+{
+  "name": "exiftool",
+  "version": "0.0.1",
+  "description": "A Node.js wrapper for exiftool",
+  "main": "./lib/eiftool",
+  "author": {
+    "name": "Nathan Peck",
+    "email": "nathan@storydesk.com"
+  },
+  "devDependencies": {
+    "mocha":      "1.17.1",
+    "chai":       "1.8.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/nathanpeck/exiftool.git"
+  },
+  "keywords": [
+    "exif",
+    "file",
+    "metadata",
+    "binary",
+    "image"
+  ],
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://raw.githubusercontent.com/nathanpeck/exiftool/master/LICENSE"
+    }
+  ],
+  "readmeFilename": "README.md",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha -R spec -s 100 ./tests/test.js"
+  }
+}
