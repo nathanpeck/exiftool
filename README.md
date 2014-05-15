@@ -1,6 +1,6 @@
 # exiftool [![Build Status](https://travis-ci.org/nathanpeck/exiftool.svg?branch=master)](https://travis-ci.org/nathanpeck/exiftool)
 
-A node.js wrapper around exiftool, a commandline utility that can extract metadata from many different filetypes, including JPEG, PNG, PDF, WMV, MOV.
+A node.js wrapper around [exiftool](http://owl.phy.queensu.ca/~phil/exiftool/), a commandline utility that can extract metadata from many different filetypes, including JPEG, PNG, PDF, WMV, MOV. For a full list see the [exiftool list of supported filetypes](http://www.sno.phy.queensu.ca/~phil/exiftool/#supported).
 
 ## Installation
 
