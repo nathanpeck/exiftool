@@ -2,7 +2,7 @@
   "name": "exiftool",
   "version": "0.0.1",
   "description": "A Node.js wrapper for exiftool",
-  "main": "./lib/eiftool",
+  "main": "./lib/exiftool",
   "author": {
     "name": "Nathan Peck",
     "email": "nathan@storydesk.com"
