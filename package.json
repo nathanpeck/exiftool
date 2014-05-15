@@ -1,6 +1,6 @@
 {
   "name": "exiftool",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Metadata extraction from numerous filetypes including JPEG, PNG, PDF, MOV, WMV, MP3, MP4, and others.",
   "main": "./lib/exiftool",
   "author": {
