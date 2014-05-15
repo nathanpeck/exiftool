@@ -3,4 +3,4 @@ node_js:
   - "0.10"
 before_install:
  - sudo apt-get update -qq
- - sudo apt-get install -qq exiftool
+ - sudo apt-get install -qq libimage-exiftool-perl
