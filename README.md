@@ -163,3 +163,25 @@ __From a MOV:__
   imageSize: '320x136',
   rotation: 0 }
 ```
+
+## Filtering metadata
+
+You can also provide an optional list of extra parameters to pass into exiftool, if you want it to return only specific metadata keys:
+
+```js
+var exif = require('exiftool');
+var fs   = require('fs');
+
+fs.readFile('./tests/resources/chvrches.jpg', ['-imageWidth', '-imageHeight'], function (err, data) {
+  if (err)
+    throw err;
+  else {
+    exif.metadata(data, function (err, metadata) {
+      if (err)
+        throw err;
+      else
+        console.log(metadata);
+    });
+  }
+});
+```
