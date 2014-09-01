@@ -10,7 +10,7 @@ describe('Giving JPG image binary data to exiftool', function () {
       if (err)
         throw err;
       else
-        exif.metadata(data, [], function (err, metadata) {
+        exif.metadata(data, function (err, metadata) {
           if (err)
             throw err;
           else
@@ -37,7 +37,7 @@ describe('Giving PNG image binary data to exiftool', function () {
       if (err)
         throw err;
       else
-        exif.metadata(data, [], function (err, metadata) {
+        exif.metadata(data, function (err, metadata) {
           if (err)
             throw err;
           else
@@ -64,7 +64,7 @@ describe('Giving PDF binary data to exiftool', function () {
       if (err)
         throw err;
       else
-        exif.metadata(data, [], function (err, metadata) {
+        exif.metadata(data, function (err, metadata) {
           if (err)
             throw err;
           else
@@ -91,7 +91,7 @@ describe('Giving MOV video binary data to exiftool', function () {
       if (err)
         throw err;
       else
-        exif.metadata(data, [], function (err, metadata) {
+        exif.metadata(data, function (err, metadata) {
           if (err)
             throw err;
           else
