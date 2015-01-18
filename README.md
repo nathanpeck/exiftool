@@ -42,6 +42,17 @@ fs.readFile('./tests/resources/chvrches.jpg', function (err, data) {
 });
 ```
 
+```js
+var exif = require('exiftool');
+
+exif.metadata('./tests/resources/chvrches.jpg', function (err, metadata) {
+  if (err)
+    throw err;
+  else
+    console.log(metadata);
+});
+```
+
 The properties and contents of the metadata dictionary returned by exiftool will vary widely depending on the filetype but you can expect dictionaries that look similar to this:
 
 __From a JPG:__
