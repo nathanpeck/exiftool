@@ -172,11 +172,11 @@ You can also provide an optional list of extra parameters to pass into exiftool,
 var exif = require('exiftool');
 var fs   = require('fs');
 
-fs.readFile('./tests/resources/chvrches.jpg', ['-imageWidth', '-imageHeight'], function (err, data) {
+fs.readFile('./tests/resources/chvrches.jpg', function (err, data) {
   if (err)
     throw err;
   else {
-    exif.metadata(data, function (err, metadata) {
+    exif.metadata(data, ['-imageWidth', '-imageHeight'], function (err, metadata) {
       if (err)
         throw err;
       else
