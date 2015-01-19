@@ -42,6 +42,17 @@ fs.readFile('./tests/resources/chvrches.jpg', function (err, data) {
 });
 ```
 
+```js
+var exif = require('exiftool');
+
+exif.metadata('./tests/resources/chvrches.jpg', function (err, metadata) {
+  if (err)
+    throw err;
+  else
+    console.log(metadata);
+});
+```
+
 The properties and contents of the metadata dictionary returned by exiftool will vary widely depending on the filetype but you can expect dictionaries that look similar to this:
 
 __From a JPG:__
@@ -172,11 +183,11 @@ You can also provide an optional list of extra parameters to pass into exiftool,
 var exif = require('exiftool');
 var fs   = require('fs');
 
-fs.readFile('./tests/resources/chvrches.jpg', ['-imageWidth', '-imageHeight'], function (err, data) {
+fs.readFile('./tests/resources/chvrches.jpg', function (err, data) {
   if (err)
     throw err;
   else {
-    exif.metadata(data, function (err, metadata) {
+    exif.metadata(data, ['-imageWidth', '-imageHeight'], function (err, metadata) {
       if (err)
         throw err;
       else
