@@ -44,6 +44,8 @@ fs.readFile('./tests/resources/chvrches.jpg', function (err, data) {
 
 ```js
 var exif = require('exiftool');
+// When change the location de exiftool
+exif.command('./my-path/My-binary');
 
 exif.metadata('./tests/resources/chvrches.jpg', function (err, metadata) {
   if (err)
@@ -58,7 +60,7 @@ The properties and contents of the metadata dictionary returned by exiftool will
 __From a JPG:__
 
 ```js
-{ exiftoolVersionNumber: 9.58,
+[ exiftoolVersionNumber: 9.58,
   fileType: 'JPEG',
   mimeType: 'image/jpeg',
   jfifVersion: 1.01,
@@ -71,13 +73,13 @@ __From a JPG:__
   bitsPerSample: 8,
   colorComponents: 3,
   yCbCrSubSampling: 'YCbCr4:2:0 (2 2)',
-  imageSize: '620x413' }
+  imageSize: '620x413' ]
 ```
 
 __From a MOV:__
 
 ```js
-{ exiftoolVersionNumber: 9.58,
+[ exiftoolVersionNumber: 9.58,
   fileType: 'MOV',
   mimeType: 'video/quicktime',
   majorBrand: 'Apple QuickTime (.MOV/QT)',
@@ -172,7 +174,7 @@ __From a MOV:__
   userDataDes: 'In theaters 2012',
   avgBitrate: '457 kbps',
   imageSize: '320x136',
-  rotation: 0 }
+  rotation: 0 ]
 ```
 
 ## Filtering metadata
