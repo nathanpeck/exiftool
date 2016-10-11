@@ -29,6 +29,28 @@ describe('Giving JPG image binary data to exiftool', function () {
   });
 });
 
+describe('Giving JPG file path to exiftool', function () {
+  var response;
+
+  before(function (done) {
+    exif.metadata(process.cwd() + '/tests/resources/chvrches.jpg', function (err, metadata) {
+      if (err)
+        throw err;
+      else
+      {
+        console.log(metadata);
+        response = metadata;
+        done();
+      }
+    });
+  });
+
+  it('metadata return should be image metadata', function () {
+    expect(response).to.have.property('fileType');
+    expect(response.fileType).to.equal('JPEG');
+  });
+});
+
 describe('Giving PNG image binary data to exiftool', function () {
   var response;
 
